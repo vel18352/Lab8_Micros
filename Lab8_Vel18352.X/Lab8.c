@@ -1,10 +1,10 @@
 /*
-Archivo:        Lab6_Vel18352
+Archivo:        Lab8_Vel18352
 Dispositivo:    PIC16F887
 Autor:		    Emilio Velasquez 18352
 Compilador:	    XC8, MPLABX 5.40
-Programa:       Contador binario y display de voltaje por ADC
-Hardware:	    2 potenciometros, 8 leds, 4 displays 7 segmentos
+Programa:       Comunicacion UART con potenciometro y barra led ASCII
+Hardware:	    1 potenciometro, 1 barra led de 10 leds, 1 USB TTL
 Creado:         27/03/2023
 Ultima modificacion: 27/03/2023
  */
@@ -139,7 +139,7 @@ void Setup(void)
     TRISD = 0;      //Establece PORTD como salida
     PORTD = 0;      //Limpia PORTD
     
-    // Configuración del oscilador
+    // Configuraciï¿½n del oscilador
     OSCCONbits.IRCF = 0b0110;   // 4 MHz
     OSCCONbits.SCS = 1;         // Oscilador interno
 }
